@@ -1,0 +1,21 @@
+@mixin mobile-only {
+    @media screen and (max-width : mapget($breakpoint, mobile)) {
+        @content;        
+    }
+}
+
+@mixin font-txt {
+    font-family: 'Roboto', sans-serif;
+}
+@mixin font-tit {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin flex-centreh{
+    display: flex;
+    justify-content: center; 
+}
+@mixin flex-centrev{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,36 @@
+body {
+    width: 280px;
+    margin: 0px;
+}
+    ul {
+        list-style: none; 
+    }
+
+    img {
+            object-fit: cover;
+            max-width: 100%;
+    }
+    
+    figure {
+        width: 100%;
+        margin: 0px;
+    }
+
+    figcaption {
+        & p {
+            margin:0px
+        }
+    }
+    a /* Liens par défaut (non survolés) */
+        {
+            text-decoration: none;
+        &:visited, &:link {
+            text-decoration: none;
+            color: black;
+        }
+    }
+.btn-fnc{
+    & ul{
+        display: flex;
+    }
+}

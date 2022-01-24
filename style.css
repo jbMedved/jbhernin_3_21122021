@@ -1,5 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+body {
+  width: 280px;
+  margin: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+figure {
+  width: 100%;
+  margin: 0px;
+}
+
+figcaption p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited, a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.btn-fnc ul {
+  display: flex;
+}
+
+.situation {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+.presentation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F2F2F2;
+}
+
+.fonctionnement {
+  margin-left: 5%;
+}
+
+.btn-fnc {
+  display: flex;
+  align-items: center;
+}
+.btn-fnc-choice {
+  display: flex;
+  border: 0.5px solid;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  margin-left: 0;
+  width: -webkit-fill-available;
+  background-color: #F2F2F2;
+  box-shadow: 3px 3px 3px #9356DC;
+}
+.btn-fnc-choice i {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+}
+.btn-fnc-choice i:hover, .btn-fnc-choice i:active {
+  color: #9356DC;
+}
+.btn-fnc-choice-num {
+  border: 1px solid #9356DC;
+  background-color: #9356DC;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
 
 /*# sourceMappingURL=style.css.map */
