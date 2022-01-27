@@ -5,44 +5,95 @@
 @import "./base/general";
 
 
+.logo {
+    margin: auto;
+    width: 50%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
 
 .situation {
     @include flex-centreh;
     border: none;
-}
-.presentation{
-    @include flex-centreh;
+    background-color: darken($grix, 20%);
+    padding: 5% 0 5% 0;
+    
+    & i{
+        padding-right: 5%;
+    }
+    
+    & form{
+        width: 30%;
+        
+        & input{
+            background-color: darken($grix, 20%);
+            border: none;
+        }
+    }
+}    
+
+.presentation{    
     flex-direction: column;
     background-color: $grix;
+    padding-bottom: 5%;
+    
+    &__1, &__2, &__explore{
+        @include flex-centreh;
+        text-align: center;
+    }
+    & h2{
+        margin-top: 0px;
+    }
+
+
+    &__explore{
+        width: 60%;
+        margin: auto;
+        padding:10px;
+        border: 0px solid $couleur-primaire;
+        background: linear-gradient($couleur-secondaire, $couleur-primaire);
+        color: white;
+        border-radius: 20px;
+        margin-bottom: 30px;
+    }
 }
+
 .fonctionnement{
     margin-left: 5%;
 }
 
 .btn-fnc {
-    
     @include flex-centrev;
-    &-choice{
-        display:flex;
-        border: 0.5px solid;
+
+    &__choice{
+        @include flex-centreh;
+        border: 0px solid;
         border-radius: 10px;
         padding: 10px;
         margin: 15px;
         margin-left: 0;
         width: -webkit-fill-available;
         background-color: $grix;
-        box-shadow: 3px 3px 3px $couleur-primaire;
+        box-shadow: 3px 3px 3px darken($grix, 10%);
+        position: relative;
+
         & i{
-            margin-left: 5px;
-            margin-right: 5px;
+            @include decalage;
             width: 20px;
             @include flex-centreh;
-
-            &:hover, &:active{
-                color: $couleur-primaire;
-            }
+            position: absolute;
+            left: 10%;
         }    
-        &-num{
+        
+        &:hover {
+            background-color: lighten($color: $couleur-primaire, $amount: 35%);
+            color: $couleur-primaire;
+        }
+
+        &__txt{
+            color: initial;
+        }
+        &__num{
             border: 1px solid $couleur-primaire;
             background-color: $couleur-primaire;
             border-radius: 10px;
@@ -52,6 +103,71 @@
             display: flex;
             align-items: center;
             height: 50%;
+            position: absolute;
+            left: -1%;
+        }
+    }
+}
+#restos {
+    background-color: $grix;
+    & figure {
+        @include decalage;
+
+     
+    }
+}
+.restos {
+    
+    &__carte{
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 5%;
+        &__pastille-new{
+            border: 0px solid; 
+            background-color: $couleur-tertiaire;
+            color: darken($couleur-tertiaire, 40%);
+            width: 60px;
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            padding: 5px 10px;
+        }
+        &__coeur{
+            font-size: 200%;
+            @include flex-centrev;
+            padding-right: 8%;
+            transition: transform 500ms;
+            
+            &__coeur-1{
+                margin: auto;
+                z-index: 0;
+            }
+                
+            &__coeur-2{
+                margin: auto;
+                color: $couleur-primaire;
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 250ms, z-index 250ms;
+            }
+        }
+        & img{
+            aspect-ratio: 2 / 1;
+            border-radius: 20px 20px 0px 0px;
+        }
+        &__texte{
+            margin-left: 5%;
+            padding-bottom: 5%;
+            & h3 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+        }
+        & figcaption{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 0px 0px 20px 20px;
         }
     }
 }

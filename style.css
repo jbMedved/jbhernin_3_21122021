@@ -2,8 +2,9 @@
 @import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
-  width: 280px;
-  margin: 0px;
+  margin: auto;
+  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -16,7 +17,7 @@ img {
 }
 
 figure {
-  width: 100%;
+  width: 90%;
   margin: 0px;
 }
 
@@ -36,17 +37,53 @@ a:visited, a:link {
   display: flex;
 }
 
+.logo {
+  margin: auto;
+  width: 50%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
 .situation {
   display: flex;
   justify-content: center;
   border: none;
+  background-color: #bfbfbf;
+  padding: 5% 0 5% 0;
+}
+.situation i {
+  padding-right: 5%;
+}
+.situation form {
+  width: 30%;
+}
+.situation form input {
+  background-color: #bfbfbf;
+  border: none;
 }
 
 .presentation {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   background-color: #F2F2F2;
+  padding-bottom: 5%;
+}
+.presentation__1, .presentation__2, .presentation__explore {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.presentation h2 {
+  margin-top: 0px;
+}
+.presentation__explore {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  border: 0px solid #9356DC;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .fonctionnement {
@@ -57,28 +94,36 @@ a:visited, a:link {
   display: flex;
   align-items: center;
 }
-.btn-fnc-choice {
+.btn-fnc__choice {
   display: flex;
-  border: 0.5px solid;
+  justify-content: center;
+  border: 0px solid;
   border-radius: 10px;
   padding: 10px;
   margin: 15px;
   margin-left: 0;
   width: -webkit-fill-available;
   background-color: #F2F2F2;
-  box-shadow: 3px 3px 3px #9356DC;
+  box-shadow: 3px 3px 3px #d9d9d9;
+  position: relative;
 }
-.btn-fnc-choice i {
-  margin-left: 5px;
-  margin-right: 5px;
+.btn-fnc__choice i {
+  margin-left: 5%;
+  margin-right: 5%;
   width: 20px;
   display: flex;
   justify-content: center;
+  position: absolute;
+  left: 10%;
 }
-.btn-fnc-choice i:hover, .btn-fnc-choice i:active {
+.btn-fnc__choice:hover {
+  background-color: #f2eafb;
   color: #9356DC;
 }
-.btn-fnc-choice-num {
+.btn-fnc__choice__txt {
+  color: initial;
+}
+.btn-fnc__choice__num {
   border: 1px solid #9356DC;
   background-color: #9356DC;
   border-radius: 10px;
@@ -88,6 +133,68 @@ a:visited, a:link {
   display: flex;
   align-items: center;
   height: 50%;
+  position: absolute;
+  left: -1%;
+}
+
+#restos {
+  background-color: #F2F2F2;
+}
+#restos figure {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.restos__carte {
+  border-radius: 10px;
+  position: relative;
+  margin-bottom: 5%;
+}
+.restos__carte__pastille-new {
+  border: 0px solid;
+  background-color: #99E2D0;
+  color: #278870;
+  width: 60px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 5px 10px;
+}
+.restos__carte__coeur {
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  padding-right: 8%;
+  transition: transform 500ms;
+}
+.restos__carte__coeur__coeur-1 {
+  margin: auto;
+  z-index: 0;
+}
+.restos__carte__coeur__coeur-2 {
+  margin: auto;
+  color: #9356DC;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms, z-index 250ms;
+}
+.restos__carte img {
+  aspect-ratio: 2/1;
+  border-radius: 20px 20px 0px 0px;
+}
+.restos__carte__texte {
+  margin-left: 5%;
+  padding-bottom: 5%;
+}
+.restos__carte__texte h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.restos__carte figcaption {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0px 0px 20px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

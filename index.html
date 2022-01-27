@@ -15,110 +15,104 @@
         
     </header>
     <div class="situation">
-        <table ><!--le mode tableau pour bien les aligner -->
-            <tr>
-                <td>
-                    <i class="fas fa-map-marker-alt"></i>
-                </td>
-                <td>
-                    <form class="cherche">
-                        <input type="search" name="cherche" id="cherche" placeholder="Paris, Belleville"/>
-                    </form>
-                </td>
-            </tr>
-       </table> 
+        <i class="fas fa-map-marker-alt"></i>
+        <form class="situation__cherche">
+            <input type="search" name="cherche" id="cherche" placeholder="Paris, Belleville"/>
+        </form>
     </div>
     <div class="presentation">
-        <p class="pres1">Réservez le menu qui vous convient</p>
-        <p class="pres2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="explore">Explorer nos restaurants</button>
+        <h2 class="presentation__1">Réservez le menu qui vous convient</h2>
+        <p class="presentation__2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <button class="presentation__explore"><a href="#restos">Explorer nos restaurants</a></button>
     </div>
     <section class="fonctionnement">
         <div>
-            Fonctionnement
+            <h2>Fonctionnement</h2>
         </div>
         <div class="btn-fnc">
-            <div class="btn-fnc-choice-num">1</div>
-            <div class="btn-fnc-choice">
-                <div><i class="fas fa-mobile-alt"></i></div>
-                <div>Choisissez un restaurant</div>
+            <div class="btn-fnc__choice">
+                <div class="btn-fnc__choice__num">1</div>
+                <div class="btn-fnc__choice__logo"><i class="fas fa-mobile-alt"></i></div>
+                <div class="btn-fnc__choice__txt">Choisissez un restaurant</div>
             </div>
         </div>
         <div class="btn-fnc">
-            <div class="btn-fnc-choice-num">2</div>
-            <div class="btn-fnc-choice">
+            <div class="btn-fnc__choice">
+                <div class="btn-fnc__choice__num">2</div>
                 <div><i class="fas fa-list"></i></div>
-                <div>Composez votre menu</div>
+                <div class="btn-fnc__choice__txt">Composez votre menu</div>
             </div>
         </div>
         <div class="btn-fnc">
-            <div class="btn-fnc-choice-num">3</div>
-            <div class="btn-fnc-choice">
+            <div class="btn-fnc__choice">
+                <div class="btn-fnc__choice__num">3</div>
                 <div><i class="fas fa-store"></i></div>
-                <div>Dégustez au restaurant</div>
+                <div class="btn-fnc__choice__txt">Dégustez au restaurant</div>
             </div> 
         </div>
     </section>
-    <section class="restos">
-        <p>Restaurants</p>
-        <figure class="resto-carte">
+    <section id="restos">
+        <h2>Restaurants</h2>
+        <figure class="restos__carte">
             <a href="palette.html">
                 <img src="sources/images/restaurants/palette.jpg" alt="La palette du gout"/>
-                <div class="pastille-new">
+                <div class="restos__carte__pastille-new">
                     Nouveau
                 </div>
             </a>
             <figcaption>
-                <div class="texte">
-                    <p class="nom-resto">La palette du goût</p>
-                    <p class="place-resto">Ménilmontant</p>
+                <div class="restos__carte__texte">
+                    <h3 class="restos__carte__texte__nom">La palette du goût</h3>
+                    <p class="restos__carte__texte__place">Ménilmontant</p>
                 </div>
-                <div class="coeur">
-                    <i class="far fa-heart"></i>
+                <div class="restos__carte__coeur">
+                    <div class="restos__carte__coeur__coeur-1"><i class="far fa-heart"></i></div>
+                        <div class="restos__carte__coeur__coeur-2"><i class="fas fa-heart"></i></div>
+                    
                 </div>
             </figcaption>                                
         </figure>
-        <figure class="resto-carte">
+        <figure class="restos__carte">
             <a href="note.html">
                 <img src="sources/images/restaurants/note.jpg" alt="La note enchantée"/>
-                <div class="pastille-new">
+                <div class="restos__carte__pastille-new">
                     Nouveau
                 </div>
             </a>
             <figcaption>
-                <div class="texte">
-                    <p class="nom-resto">La note enchantée</p>
-                    <p class="place-resto">Charonne</p>
+                <div class="restos__carte__texte">
+                    <h3 class="restos__carte__texte__nom">La note enchantée</h3>
+                    <p class="restos__carte__texte__place">Charonne</p>
                 </div>
-                <div class="coeur">
+                <div class="restos__carte__coeur">
                     <i class="far fa-heart"></i>
                 </div>
             </figcaption>                                
         </figure>
-        <figure class="resto-carte">
+        <figure class="restos__carte">
             <a href="frenchi.html">
                 <img src="sources/images/restaurants/frenchi.jpg" alt="A la française"/>
             </a>
             <figcaption>
-                <div class="texte">
-                    <p class="nom-resto">A la française</p>
-                    <p class="place-resto">Cité Rouge</p>
+                <div class="restos__carte__texte">
+                    <h3 class="restos__carte__texte__nom">A la française</h3>
+                    <p class="restos__carte__texte__place">Cité Rouge</p>
                 </div>
-                <div class="coeur">
+                <div class="restos__carte__coeur">
                     <i class="far fa-heart"></i>
                 </div>
             </figcaption>                                 
         </figure>
-        <figure class="resto-carte">
+        <figure class="restos__carte">
             <a href="delice.html">
                 <img src="sources/images/restaurants/delice.jpg" alt="Le délice des sens"/>
             </a>
             <figcaption>
-                <div class="texte">
-                    <p class="nom-resto">Le délice des sens</p>
-                    <p class="place-resto">Folie-Méricourt</p>
+                <div class="restos__carte__texte">
+                    <h3 class="restos__carte__texte__nom">Le délice des sens</h3>
+                    <p class="restos__carte__texte__place">Folie-Méricourt</p>
                 </div>
-                <div class="coeur">
+                <div class="restos__carte__coeur">
                     <i class="far fa-heart"></i>
                 </div>
             </figcaption>                         

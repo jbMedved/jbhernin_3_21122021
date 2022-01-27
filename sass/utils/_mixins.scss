@@ -3,7 +3,17 @@
         @content;        
     }
 }
-
+@mixin tablette {
+    @media screen and (min-width: mapget($breakpoint, tablette1)) 
+    and (max-width: mapget($breakpoint, tablette2)) {
+        @content;        
+    }
+}
+@mixin desktop {
+    @media screen and (min-width : mapget($breakpoint, desktop)) {
+        @content;        
+    }
+}
 @mixin font-txt {
     font-family: 'Roboto', sans-serif;
 }
@@ -18,4 +28,8 @@
 @mixin flex-centrev{
     display: flex;
     align-items: center;
+}
+@mixin decalage {
+margin-left: 5%;
+margin-right: 5%;
 }
