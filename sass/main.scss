@@ -10,6 +10,7 @@
     width: 50%;
     padding-top: 5%;
     padding-bottom: 2%;
+    @include flex-centreh;
 }
 
 .situation {
@@ -17,14 +18,11 @@
     border: none;
     background-color: darken($grix, 20%);
     padding: 5% 0 5% 0;
-    
     & i{
         padding-right: 5%;
     }
-    
     & form{
         width: 30%;
-        
         & input{
             background-color: darken($grix, 20%);
             border: none;
@@ -36,8 +34,7 @@
 .presentation{    
     flex-direction: column;
     background-color: $grix;
-    padding-bottom: 5%;
-    
+    padding-bottom: 5%;  
     &__1, &__2, &__explore{
         @include flex-centreh;
         text-align: center;
@@ -45,8 +42,6 @@
     & h2{
         margin-top: 0px;
     }
-
-
     &__explore{
         width: 60%;
         margin: auto;
@@ -65,7 +60,6 @@
 
 .btn-fnc {
     @include flex-centrev;
-
     &__choice{
         @include flex-centreh;
         border: 0px solid;
@@ -78,10 +72,8 @@
         background-color: $grix;
         box-shadow: 3px 3px 3px darken($grix, 10%);
         position: relative;
-
         & i{
             @include flex-centreh;
-
         }    
         &__logo{
             @include decalage;
@@ -90,7 +82,6 @@
             background-color: lighten($color: $couleur-primaire, $amount: 35%);
             color: $couleur-primaire;
         }
-
         &__txt{
             color: initial;
         }
@@ -112,10 +103,10 @@
 
 #restos {
     background-color: $grix;
+    padding-bottom: 5%;
     & figure {
         @include decalage;
-        background-color: white;
-    
+        background-color: white;    
     }
 }
 
@@ -124,9 +115,9 @@
         @include decalage;
     }
     &__carte{
-        border-radius: 10px;
+        border-radius: 20px;
         position: relative;
-        margin-bottom: 5%;
+        margin-top: 5%;
         &__pastille-new{
             border: 0px solid; 
             background-color: $couleur-tertiaire;
@@ -145,9 +136,7 @@
             font-size: 200%;
             @include flex-centrev;
             padding-right: 8%;
-            position: relative;
-            
-            
+            position: relative;                      
             &__coeur-1{
                 opacity: 1;
                 position: absolute;
@@ -156,10 +145,9 @@
                 &:hover, &active{
                     opacity: 0;
                 }
-            }
-                
+            }                
             &__coeur-2{
-                color: $couleur-primaire;
+                color: linear-gradient($couleur-secondaire, $couleur-primaire);
                 position: absolute;
                 left: 30%;
                 opacity: 0;
@@ -189,19 +177,19 @@
         }
     }
 }
+
 footer{
     background-color: darken($color: $grix, $amount: 75%);
 }
+
 .footer{
     &__logo{
         color: white;
-
         & svg{
             padding-top: 3%;
             stroke: white;
             width: 20%;
-            @include decalage;
-            
+            @include decalage;            
             & path{fill: white;
             }
         }
@@ -226,22 +214,22 @@ footer{
 }
 
 
-.spinner{
-    font-size: 40px;
-    text-align: center;
-    color: $couleur-tertiaire;
-
-}
-
 .loader{
+    @include flex-centreh;
     width: 150px;
     height: 150px;
-    display: inline-block;
+    
     position: relative;
+    
 }
+
 .double{
+    margin: auto;
     border-radius: 150px;
     border: 3px solid transparent;
+    position: absolute;
+    top: 100px;
+    left: 75px;
     &:after{
         content: "";
         position: absolute;
@@ -253,16 +241,32 @@ footer{
         height: 150px;
         border: 3px solid transparent;
         border-radius: 150px;
+        transform :scale(1);
+        background-color: $couleur-tertiaire;
         border-top-color: $couleur-secondaire;
         border-bottom-color: $couleur-primaire;
-        animation: loadspin 2s linear infinite;
+        animation: loadspin 1s linear forwards;
     }
 }
 
-.test {
+.logo-tourne {
+    align-self: center;
     width: 100px;
-    animation: loadspin2 2s linear infinite;
+    transform :z-index(0);
+    animation: loadspin2 2s linear forwards;
     position: absolute;
-    top: 50px;
-    left: 115px;
+    top: 170px;
+    left: 100px;
+
+}
+body{
+    position: relative;
+    z-index: 0;
+    
+}
+.body-french, .tout{
+    position: relative;
+    z-index: 0;
+    transform :scale(0);
+    animation: duringload 2.5s linear forwards;
 }
