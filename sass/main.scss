@@ -72,8 +72,12 @@
         background-color: $grix;
         box-shadow: 3px 3px 3px darken($grix, 10%);
         position: relative;
+        height: 30px;
         & i{
             @include flex-centreh;
+            position: absolute;
+            left: 15%;
+            top: 35%;
         }    
         &__logo{
             @include decalage;
@@ -84,6 +88,9 @@
         }
         &__txt{
             color: initial;
+            left: 25%;
+            top: 35%;
+            position: absolute;
         }
         &__num{
             border: 1px solid $couleur-primaire;
@@ -94,9 +101,10 @@
             color: white;
             display: flex;
             align-items: center;
-            height: 50%;
+            height: 38%;
             position: absolute;
-            left: -1%;
+            left: -4%;
+            top: 28%;
         }
     }
 }
@@ -129,7 +137,7 @@
             padding: 5px 10px;
         }
         &__texte{
-            flex:8;
+            flex:5;
         }
         &__coeur{
             flex:1;
@@ -213,60 +221,22 @@ footer{
     }
 }
 
-
-.loader{
+/* Restaurant "A la francaise" */
+.head-resto{
+    display: flex;
+}
+.retour{
+    font-size: 25px;
+    flex: 1;
     @include flex-centreh;
-    width: 150px;
-    height: 150px;
-    
-    position: relative;
-    
+    align-items: center;
 }
-
-.double{
-    margin: auto;
-    border-radius: 150px;
-    border: 3px solid transparent;
-    position: absolute;
-    top: 100px;
-    left: 75px;
-    &:after{
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: -3px;
-        bottom: -3px;
-        right: -3px;
-        width: 150px;
-        height: 150px;
-        border: 3px solid transparent;
-        border-radius: 150px;
-        transform :scale(1);
-        background-color: $couleur-tertiaire;
-        border-top-color: $couleur-secondaire;
-        border-bottom-color: $couleur-primaire;
-        animation: loadspin 1s linear forwards;
+.logo2{
+    flex: 5;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    @include flex-centreh;
+    & img{
+        width: 50%;
     }
-}
-
-.logo-tourne {
-    align-self: center;
-    width: 100px;
-    transform :z-index(0);
-    animation: loadspin2 2s linear forwards;
-    position: absolute;
-    top: 170px;
-    left: 100px;
-
-}
-body{
-    position: relative;
-    z-index: 0;
-    
-}
-.body-french, .tout{
-    position: relative;
-    z-index: 0;
-    transform :scale(0);
-    animation: duringload 2.5s linear forwards;
 }

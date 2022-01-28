@@ -2,6 +2,8 @@ body {
     margin: auto;
     font-family: 'Shrikhand', cursive;
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    z-index: 0;
 }
 
 
@@ -36,4 +38,57 @@ body {
     & ul{
         display: flex;
     }
+}
+
+.loader{
+    @include flex-centreh;
+    width: 150px;
+    height: 150px;
+    
+    position: relative;
+    
+}
+
+.double{
+    margin: auto;
+    border-radius: 150px;
+    border: 3px solid transparent;
+    position: absolute;
+    top: 100px;
+    left: 75px;
+    &:after{
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        bottom: -3px;
+        right: -3px;
+        width: 150px;
+        height: 150px;
+        border: 3px solid transparent;
+        border-radius: 150px;
+        transform :scale(1);
+        background-color: $couleur-tertiaire;
+        border-top-color: $couleur-secondaire;
+        border-bottom-color: $couleur-primaire;
+        animation: loadspin 1s linear forwards;
+    }
+}
+
+.logo-tourne {
+    align-self: center;
+    width: 100px;
+    transform :z-index(0);
+    animation: loadspin2 2s linear forwards;
+    position: absolute;
+    top: 170px;
+    left: 100px;
+
+}
+
+.tout{
+    position: relative;
+    z-index: 0;
+    transform :scale(0);
+    animation: duringload 2.5s linear forwards;
 }
