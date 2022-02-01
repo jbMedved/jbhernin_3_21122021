@@ -155,7 +155,7 @@
                 }
             }                
             &__coeur-2{
-                color: linear-gradient($couleur-secondaire, $couleur-primaire);
+                color: $couleur-primaire;/*linear-gradient($couleur-primaire, $couleur-secondaire);*/
                 position: absolute;
                 left: 30%;
                 opacity: 0;
@@ -238,5 +238,100 @@ footer{
     @include flex-centreh;
     & img{
         width: 50%;
+    }
+}
+
+.img-et-menu{
+    position: relative;
+}
+.img-resto{
+
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.menu{
+    margin-top: -5%;
+    background-color: $grix;
+    padding-top: 10%;
+    border-radius: 50px 50px 0px 0px;
+    & h2{
+        @include decalage;
+        & .ligne{
+            border: 3px solid transparent;
+            border-bottom-color: $couleur-tertiaire;
+            width: 15%;
+        }
+    }
+    &__nom{
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+        &__txt{
+            font-family: "Shrikhand", cursive;
+            flex: 5;
+            padding-left: 5%;
+        }
+        &__coeur{
+            background-color: yellow;
+            flex: 1;
+            position: relative;
+            &__coeur-1{
+                opacity: 1;
+                position: absolute;
+                left: 30%;
+                transition: opacity 500ms; 
+                &:hover, &active{
+                    opacity: 0;
+                }
+            }                
+            &__coeur-2{
+                color: $couleur-primaire;/*linear-gradient($couleur-primaire, $couleur-secondaire);*/
+                position: absolute;
+                left: 30%;
+                opacity: 0;
+                transition: opacity 500ms; 
+                &:hover, &active{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__entrees{
+        @include decalage;
+        &__entree1, &__entree2, &__entree3{
+            @include contour-plat;
+        }
+        @include plats
+    }
+
+    &__plats{
+        @include decalage;
+        &__plat1, &__plat2, &__plat3{
+            @include contour-plat;
+        }
+        @include plats
+    }
+    &__desserts{
+        @include decalage;
+        &__dessert1, &__dessert2, &__dessert3{
+            @include contour-plat;
+        }
+        @include plats
+    }
+}
+.cmd{
+    display: flex;
+    &__btn{
+        width: 55%;
+        margin: auto;
+        padding:20px;
+        border: 0px solid $couleur-primaire;
+        background: linear-gradient($couleur-secondaire, $couleur-primaire);
+        color: white;
+        border-radius: 30px;
+        margin-bottom: 60px;
+        margin-top: 30px;
+        font-size: 18px;
     }
 }

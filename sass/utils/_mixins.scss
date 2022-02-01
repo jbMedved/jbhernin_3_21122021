@@ -29,7 +29,79 @@
     display: flex;
     align-items: center;
 }
+@mixin flex-centrevh{
+display: flex;
+justify-content: center;
+align-items: center;
+}
 @mixin decalage {
 margin-left: 5%;
 margin-right: 5%;
+}
+@mixin plats {
+    &__desc{
+        &:hover  &__valid__check{
+            transform: rotate(360deg);
+        }/*
+        &:active &__valid__check{
+            animation: choix-plats-check 1s forwards;
+        }*/
+        &:hover &__prix{
+            transform: translateX(-5%);
+        }/*
+        &:active &__prix{
+            animation: choix-plats-prix 1s forwards;
+        }*/
+        &:hover &__valid{
+            transform: scaleX(1);
+        }/*
+          &:active &__valid{
+            animation: choix-plats-valid 1s forwards;
+        } */
+        display: flex;
+        justify-content: space-between;
+        &__prix{
+            flex: 2;
+            padding-bottom: 2%;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            transition: transform 1s;
+            transform: translateX(67%);
+        }
+        &__txt{
+            flex: 5;
+            padding: 2% 0% 2% 2%;
+            & h3{
+                margin-top: 0;
+                margin-bottom: 1%;
+            }
+            & p{
+                margin: 0;
+            }
+        }
+        &__valid {
+            width: 12%;
+            background-color: $couleur-tertiaire;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color : white;
+            border-radius: 0px 10px 10px 0px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition :transform 1s;
+            &__check{
+                transition: transform 1s;
+            }
+        }
+    }
+}
+@mixin contour-plat {
+    border : 0 solid;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 3%;
 }

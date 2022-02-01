@@ -20,3 +20,21 @@
     75% {transform: scale(0)}
     100%{transform: scale(1)}
 }
+
+@keyframes menu{
+    0% {transform: translateY(200px); opacity:0;}
+    100% {transform: translateY(0px); opacity:1;}
+}
+
+@keyframes choix-plats-check{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes choix-plats-prix{
+    0%{transform: translateX(67%);}
+    100%{transform: translateX(-5%);}
+}
+@keyframes choix-plats-valid{
+    0%{transform: scaleX(0);}
+    100%{transform: scaleX(1);}
+}
