@@ -155,7 +155,7 @@
                 }
             }                
             &__coeur-2{
-                color: $couleur-primaire;/*linear-gradient($couleur-primaire, $couleur-secondaire);*/
+                color: $couleur-primaire;/* linear-gradient($couleur-primaire, $couleur-secondaire);*/
                 position: absolute;
                 left: 30%;
                 opacity: 0;
@@ -221,7 +221,7 @@ footer{
     }
 }
 
-/* Restaurant "A la francaise" */
+// les pages des differents restos
 .head-resto{
     display: flex;
 }
@@ -245,22 +245,28 @@ footer{
     position: relative;
 }
 .img-resto{
-
-    left: 0;
-    right: 0;
+    position: static;
     z-index: -1;
+    & img{
+        aspect-ratio: 1 / 1;
+    }
 }
 .menu{
-    margin-top: -5%;
+    position: relative;
+    margin-top: -28%;
     background-color: $grix;
     padding-top: 10%;
     border-radius: 50px 50px 0px 0px;
-    & h2{
+    & .plats{
         @include decalage;
+        margin-bottom: 5%;
+        & h2{
+        margin-bottom: 0px;
+        }
         & .ligne{
-            border: 3px solid transparent;
-            border-bottom-color: $couleur-tertiaire;
-            width: 15%;
+        border: 3px solid transparent;
+        border-bottom-color: $couleur-tertiaire;
+        width: 15%;
         }
     }
     &__nom{
@@ -273,33 +279,20 @@ footer{
             padding-left: 5%;
         }
         &__coeur{
-            background-color: yellow;
+            
             flex: 1;
             position: relative;
             &__coeur-1{
-                opacity: 1;
-                position: absolute;
-                left: 30%;
-                transition: opacity 500ms; 
-                &:hover, &active{
-                    opacity: 0;
-                }
+                @include coeur-titre1;
             }                
             &__coeur-2{
-                color: $couleur-primaire;/*linear-gradient($couleur-primaire, $couleur-secondaire);*/
-                position: absolute;
-                left: 30%;
-                opacity: 0;
-                transition: opacity 500ms; 
-                &:hover, &active{
-                    opacity: 1;
-                }
+                @include coeur-titre2;
             }
         }
     }
     &__entrees{
         @include decalage;
-        &__entree1, &__entree2, &__entree3{
+        &__entree1, &__entree2, &__entree3, &__entree4{
             @include contour-plat;
         }
         @include plats
