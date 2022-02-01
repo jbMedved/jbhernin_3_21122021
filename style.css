@@ -789,4 +789,55 @@ footer {
   font-size: 18px;
 }
 
+.menu__entrees__entree1 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 3s linear forwards;
+}
+.menu__entrees__entree2 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 3.3s linear forwards;
+}
+.menu__entrees__entree3 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 3.6s linear forwards;
+}
+.menu__entrees__entree4 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 3.9s linear forwards;
+}
+.menu__plats__plat1 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 4.2s linear forwards;
+}
+.menu__plats__plat2 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 4.5s linear forwards;
+}
+.menu__plats__plat3 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 4.8s linear forwards;
+}
+.menu__desserts__dessert1 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 5.1s linear forwards;
+}
+.menu__desserts__dessert2 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 5.4s linear forwards;
+}
+.menu__desserts__dessert3 {
+  transform: translateY(200px);
+  opacity: 0;
+  animation: menu 0.3s 5.7s linear forwards;
+}
+
 /*# sourceMappingURL=style.css.map */

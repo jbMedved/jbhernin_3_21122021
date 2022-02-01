@@ -2,3 +2,15 @@ $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 $grix: #F2F2F2;
+
+$anim-menu-duration: 0.3s;
+$anim-menu-wait: 3s;
+$anim-menu-wait02: $anim-menu-duration + $anim-menu-wait;
+$anim-menu-wait03: $anim-menu-duration + $anim-menu-wait02;
+$anim-menu-wait04: $anim-menu-duration + $anim-menu-wait03;
+$anim-menu-wait05: $anim-menu-duration + $anim-menu-wait04;
+$anim-menu-wait06: $anim-menu-duration + $anim-menu-wait05;
+$anim-menu-wait07: $anim-menu-duration + $anim-menu-wait06;
+$anim-menu-wait08: $anim-menu-duration + $anim-menu-wait07;
+$anim-menu-wait09: $anim-menu-duration + $anim-menu-wait08;
+$anim-menu-wait10: $anim-menu-duration + $anim-menu-wait09;

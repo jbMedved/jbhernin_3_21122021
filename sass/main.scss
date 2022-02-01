@@ -328,3 +328,53 @@ footer{
         font-size: 18px;
     }
 }
+// on va gerer ici l'apparition des plats
+.menu{
+    &__entrees{
+        &__entree1 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait linear forwards
+        }
+
+        &__entree2 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards
+        }
+        &__entree3 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards
+        }
+        &__entree4 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait04 linear forwards
+        }
+    }
+    &__plats{
+        &__plat1 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait05 linear forwards
+        }
+        &__plat2 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait06 linear forwards
+        }
+        &__plat3 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait07 linear forwards
+        }
+    }
+    &__desserts{
+        &__dessert1 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait08 linear forwards
+        }
+        &__dessert2 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait09 linear forwards
+        }
+        &__dessert3 {
+            transform: translateY(200px); opacity:0;
+            animation: menu $anim-menu-duration $anim-menu-wait10 linear forwards
+        }   
+    }
+}
