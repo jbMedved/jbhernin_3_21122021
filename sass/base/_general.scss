@@ -1,10 +1,17 @@
 body {
-    max-width: 767px;
+    max-width: map-get($breakpoint, mobile);
     margin: auto;
     font-family: 'Shrikhand', cursive;
     font-family: 'Roboto', sans-serif;
     position: relative;
     z-index: 0;
+    @include tablette {
+        min-width: map-get($breakpoint, tablette1); 
+        max-width: map-get($breakpoint, tablette2);
+    }
+    @include desktop {
+        min-width : map-get($breakpoint, desktop);
+    }
 }
 
 
@@ -54,9 +61,10 @@ body {
     margin: auto;
     border-radius: 150px;
     border: 3px solid transparent;
-    position: absolute;
-    top: 20%;
-    left: 25%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     &:after{
         content: "";
         position: absolute;
@@ -77,14 +85,11 @@ body {
 }
 
 .logo-tourne {
-    align-self: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
     width: 100px;
-    transform :z-index(0);
     animation: loadspin2 2s linear forwards;
-    position: absolute;
-    top: 24%;
-    left: 30%;
-
 }
 
 .tout{

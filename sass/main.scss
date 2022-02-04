@@ -1,3 +1,4 @@
+@import "./base/normalize";
 @import "./base/fonts";
 @import "./utils/variables";
 @import "./utils/tables";
@@ -11,6 +12,9 @@
     padding-top: 5%;
     padding-bottom: 2%;
     @include flex-centreh;
+}
+header{
+    object-fit: scale-down;
 }
 
 .situation {
@@ -48,9 +52,14 @@
         padding:10px;
         border: 0px solid $couleur-primaire;
         background: linear-gradient($couleur-secondaire, $couleur-primaire);
+        box-shadow: 3px 3px 3px darken($grix, 10%);
         color: white;
         border-radius: 20px;
         margin-bottom: 30px;
+        &:hover{
+            background: linear-gradient(lighten($couleur-secondaire,10%), (lighten($couleur-primaire, 10%)));
+            box-shadow: 3px 3px 3px darken($grix, 20%);
+        }
     }
 }
 
@@ -103,29 +112,61 @@
             align-items: center;
             height: 38%;
             position: absolute;
-            left: -4%;
+            left: -2.5%;
             top: 28%;
         }
     }
+    @include tablette {
+        //l'idée ici est de faire 3 carrés cote a cote
+    };
 }
 
 #restos {
     background-color: $grix;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
+    @include tablette{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 15% 40% 40%;
+        padding-bottom: 10%;
+    }
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 25% 75%;
+        padding-bottom: 5%;
+    }
     & figure {
         @include decalage;
         background-color: white;    
     }
+
 }
 
 .restos {
+
     &__titre{
         @include decalage;
+        @include tablette{
+            grid-column: 1 / span 2;
+            text-align: center;
+        }
+        @include desktop{
+            grid-row-start: 1;
+            text-align: center;
+        }
     }
     &__carte{
         border-radius: 20px;
         position: relative;
         margin-top: 5%;
+        @include tablette{
+            margin-bottom: 10%;
+        }
+        @include desktop{
+            grid-row-start: 2;
+        }
+        
         &__pastille-new{
             border: 0px solid; 
             background-color: $couleur-tertiaire;
@@ -155,13 +196,21 @@
                 }
             }                
             &__coeur-2{
-                color: $couleur-primaire;/* linear-gradient($couleur-primaire, $couleur-secondaire);*/
+                background-image: linear-gradient($couleur-primaire, $couleur-secondaire);
+                -webkit-background-clip: text;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                /*color: $couleur-primaire; linear-gradient($couleur-primaire, $couleur-secondaire);*/
                 position: absolute;
                 left: 30%;
                 opacity: 0;
+                transform :scale(1);
                 transition: opacity 500ms; 
                 &:hover, &active{
                     opacity: 1;
+                    transform :scale(1.2)
                 }
             }
         }
@@ -188,11 +237,13 @@
 
 footer{
     background-color: darken($color: $grix, $amount: 75%);
+    padding-bottom: 5%;
 }
 
 .footer{
     &__logo{
         color: white;
+        padding-bottom: 5%;
         & svg{
             padding-top: 3%;
             stroke: white;
@@ -294,6 +345,9 @@ footer{
         @include decalage;
         &__entree1, &__entree2, &__entree3, &__entree4{
             @include contour-plat;
+            @include desktop{
+                //l'idée ici est de faire 1 ligne de 3-4 carrés
+            }
         }
         @include plats
     }
@@ -302,6 +356,9 @@ footer{
         @include decalage;
         &__plat1, &__plat2, &__plat3{
             @include contour-plat;
+            @include desktop{
+                //l'idée ici est de faire 1 ligne de 3-4 carrés
+            }
         }
         @include plats
     }
@@ -309,6 +366,9 @@ footer{
         @include decalage;
         &__dessert1, &__dessert2, &__dessert3{
             @include contour-plat;
+            @include desktop{
+                //l'idée ici est de faire 1 ligne de 3-4 carrés
+            }
         }
         @include plats
     }
@@ -321,14 +381,20 @@ footer{
         padding:20px;
         border: 0px solid $couleur-primaire;
         background: linear-gradient($couleur-secondaire, $couleur-primaire);
+        box-shadow: 3px 3px 3px darken($grix, 10%);
         color: white;
         border-radius: 30px;
         margin-bottom: 60px;
         margin-top: 30px;
         font-size: 18px;
+        &:hover{
+            background: linear-gradient(lighten($couleur-secondaire,10%), (lighten($couleur-primaire, 10%)));
+            box-shadow: 3px 3px 3px darken($grix, 20%);
+        }
     }
 }
 // on va gerer ici l'apparition des plats
+// pour le media querie desktop, faire par groupe et non par plat
 .menu{
     &__entrees{
         &__entree1 {
