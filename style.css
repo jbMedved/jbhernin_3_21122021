@@ -546,7 +546,7 @@ header {
   justify-content: center;
   border: none;
   background: #e5e5e5;
-  border-top: 3px solid #bfbfbf;
+  box-shadow: inset 0 6px 6px -7px rgba(0, 0, 0, 0.5);
   padding: 5% 0 5% 0;
 }
 .situation i {
@@ -566,6 +566,16 @@ header {
   background-color: #F2F2F2;
   padding-bottom: 5%;
   padding-top: 10%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .presentation {
+    padding-top: 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .presentation {
+    padding-top: 5%;
+  }
 }
 .presentation__1, .presentation__2, .presentation__explore {
   display: flex;
