@@ -11,6 +11,7 @@ body {
     }
     @include desktop {
         min-width : map-get($breakpoint, desktop);
+        max-width: unset;
     }
 }
 

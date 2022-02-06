@@ -357,6 +357,7 @@ body {
 @media screen and (min-width: 992px) {
   body {
     min-width: 992px;
+    max-width: unset;
   }
 }
 
