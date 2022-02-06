@@ -533,7 +533,7 @@ a:visited, a:link {
   margin: auto;
   width: 50%;
   padding-top: 5%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
   display: flex;
   justify-content: center;
 }
@@ -546,7 +546,8 @@ header {
   display: flex;
   justify-content: center;
   border: none;
-  background-color: #bfbfbf;
+  background: #e5e5e5;
+  border-top: 3px solid #bfbfbf;
   padding: 5% 0 5% 0;
 }
 .situation i {
@@ -556,15 +557,16 @@ header {
   width: 30%;
 }
 .situation form input {
-  background-color: #bfbfbf;
+  background-color: #e5e5e5;
+  font-weight: 900;
   border: none;
-  max-width: 190%;
 }
 
 .presentation {
   flex-direction: column;
   background-color: #F2F2F2;
   padding-bottom: 5%;
+  padding-top: 10%;
 }
 .presentation__1, .presentation__2, .presentation__explore {
   display: flex;
@@ -680,7 +682,7 @@ header {
   display: flex;
   align-items: center;
   position: fixed;
-  left: 4%;
+  left: 3%;
   margin-top: 1%;
 }
 @media screen and (min-width: 992px) {

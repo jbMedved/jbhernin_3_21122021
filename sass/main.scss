@@ -10,7 +10,7 @@
     margin: auto;
     width: 50%;
     padding-top: 5%;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
     @include flex-centreh;
 }
 header{
@@ -20,7 +20,9 @@ header{
 .situation {
     @include flex-centreh;
     border: none;
-    background-color: darken($grix, 20%);
+    background: darken($grix,5%);
+    border-top: 3px solid darken($grix, 20%);
+    
     padding: 5% 0 5% 0;
     & i{
         padding-right: 5%;
@@ -28,9 +30,9 @@ header{
     & form{
         width: 30%;
         & input{
-            background-color: darken($grix, 20%);
+            background-color: darken($grix,5%);
+            font-weight: 900;
             border: none;
-            max-width: 190%;
         }
     }
 }    
@@ -39,6 +41,7 @@ header{
     flex-direction: column;
     background-color: $grix;
     padding-bottom: 5%;  
+    padding-top: 10%;
     &__1, &__2, &__explore{
         @include flex-centreh;
         text-align: center;
@@ -140,7 +143,7 @@ header{
             display: flex;
             align-items: center;
             position: fixed;
-            left: 4%;
+            left: 3%;
             margin-top: 1%;
             @include desktop{
                 position: absolute;
