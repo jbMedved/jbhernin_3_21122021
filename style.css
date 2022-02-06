@@ -457,7 +457,6 @@ a:visited, a:link {
   100% {
     transform: rotate(360deg) scale(0);
     opacity: 0;
-    transfrom: translateX(-999999px);
   }
 }
 @keyframes loadspin2 {
@@ -476,7 +475,6 @@ a:visited, a:link {
   100% {
     transform: rotateY(360deg) scale(0);
     opacity: 0;
-    transfrom: translateX(-999999px);
   }
 }
 @keyframes duringload {
@@ -669,8 +667,8 @@ header {
 @media screen and (min-width: 992px) {
   .btn-fnc__choice__txt {
     position: fixed;
-    left: inherit;
-    top: 57%;
+    left: unset;
+    top: 56%;
   }
 }
 .btn-fnc__choice__num {
@@ -691,6 +689,7 @@ header {
     position: absolute;
     top: 15%;
     left: 50%;
+    margin-top: unset;
   }
 }
 #restos {

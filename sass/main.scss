@@ -129,8 +129,8 @@ header{
             position: absolute;
             @include desktop{
                 position: fixed;
-                left: inherit;
-                top: 57%;
+                left: unset;
+                top: 56%;
             }
         }
         &__num{
@@ -149,7 +149,7 @@ header{
                 position: absolute;
                 top: 15%;
                 left: 50%;
-                
+                margin-top: unset;
             }
         }
     }
