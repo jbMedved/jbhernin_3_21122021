@@ -65,10 +65,24 @@ header{
 
 .fonctionnement{
     margin-left: 5%;
+    @include desktop{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 20% 80%;
+    }
+    & .fnc-titre{
+        @include desktop{
+            grid-column: 1 / span 3;
+            text-align: center;
+        }
+    }
 }
 
 .btn-fnc {
     @include flex-centrev;
+    @include desktop{
+        grid-row-start: 2;
+    }
     &__choice{
         @include flex-centreh;
         border: 0px solid;
@@ -82,14 +96,24 @@ header{
         box-shadow: 3px 3px 3px darken($grix, 10%);
         position: relative;
         height: 30px;
+        @include desktop{
+            height: 100px;
+        }
         & i{
             @include flex-centreh;
             position: absolute;
             left: 15%;
             top: 35%;
+            @include desktop{
+                left: 51%;
+                top: 42%;
+            } 
         }    
         &__logo{
             @include decalage;
+            @include desktop{
+
+            } 
         }
         &:hover {
             background-color: lighten($color: $couleur-primaire, $amount: 35%);
@@ -100,6 +124,11 @@ header{
             left: 25%;
             top: 35%;
             position: absolute;
+            @include desktop{
+                position: fixed;
+                left: inherit;
+                top: 52%;
+            }
         }
         &__num{
             border: 1px solid $couleur-primaire;
@@ -110,10 +139,15 @@ header{
             color: white;
             display: flex;
             align-items: center;
-            height: 38%;
-            position: absolute;
-            left: -2.5%;
-            top: 28%;
+            position: fixed;
+            left: 4%;
+            margin-top: 1%;
+            @include desktop{
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                
+            }
         }
     }
     @include tablette {
@@ -150,10 +184,12 @@ header{
         @include tablette{
             grid-column: 1 / span 2;
             text-align: center;
+            
         }
         @include desktop{
             grid-row-start: 1;
             text-align: center;
+            grid-column: 1/span 4;
         }
     }
     &__carte{
@@ -244,6 +280,10 @@ footer{
     &__logo{
         color: white;
         padding-bottom: 5%;
+        @include desktop{
+            display: flex;
+            justify-content: center;
+        }
         & svg{
             padding-top: 3%;
             stroke: white;
@@ -258,8 +298,15 @@ footer{
             margin: 0px;
             padding-left: 0px;
             @include decalage;
+            @include desktop{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
             & li{
                 padding-bottom: 1%;
+                @include desktop{
+                    text-align: center;
+                }
                 & i{
                     font-size: 13px;
                     width: 7%;
@@ -343,6 +390,13 @@ footer{
     }
     &__entrees{
         @include decalage;
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2%;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
         &__entree1, &__entree2, &__entree3, &__entree4{
             @include contour-plat;
             @include desktop{
@@ -354,6 +408,13 @@ footer{
 
     &__plats{
         @include decalage;
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2%;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        
         &__plat1, &__plat2, &__plat3{
             @include contour-plat;
             @include desktop{
@@ -364,6 +425,13 @@ footer{
     }
     &__desserts{
         @include decalage;
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2%;
+            grid-template-rows: repeat(2, 1fr);
+        }
+       
         &__dessert1, &__dessert2, &__dessert3{
             @include contour-plat;
             @include desktop{
@@ -399,48 +467,78 @@ footer{
     &__entrees{
         &__entree1 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+            }
         }
 
         &__entree2 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+            }
         }
         &__entree3 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+            }
         }
         &__entree4 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait04 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait04 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+            }
         }
     }
     &__plats{
         &__plat1 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait05 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait05 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards;
+            }
         }
         &__plat2 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait06 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait06 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards;
+            }
         }
         &__plat3 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait07 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait07 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards;
+            }
         }
     }
     &__desserts{
         &__dessert1 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait08 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait08 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards;
+            }
         }
         &__dessert2 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait09 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait09 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards;
+            }
         }
         &__dessert3 {
             transform: translateY(200px); opacity:0;
-            animation: menu $anim-menu-duration $anim-menu-wait10 linear forwards
+            animation: menu $anim-menu-duration $anim-menu-wait10 linear forwards;
+            @include desktop{
+                animation: menu $anim-menu-duration $anim-menu-wait03 linear forwards;
+            }
         }   
     }
 }

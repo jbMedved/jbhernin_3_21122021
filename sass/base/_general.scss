@@ -65,6 +65,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+   
     &:after{
         content: "";
         position: absolute;
@@ -81,6 +82,7 @@ body {
         border-top-color: $couleur-secondaire;
         border-bottom-color: $couleur-primaire;
         animation: loadspin 1s linear forwards;
+        
     }
 }
 
@@ -90,6 +92,7 @@ body {
     align-items: center;
     width: 100px;
     animation: loadspin2 2s linear forwards;
+    
 }
 
 .tout{

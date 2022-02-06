@@ -69,6 +69,7 @@ margin-right: 5%;
     &__desc{
         display: flex;
         justify-content: space-between;
+        
         &__txt{
             width: 80%;
             padding: 2% 0% 2% 2%;
@@ -107,6 +108,9 @@ margin-right: 5%;
             transition: transform 1s;
             transform: translateX(75%);
             /* background-color: yellow; */
+            @include tablette{
+                grid-row-start: 2;
+            }
         }
 
         &__valid {
