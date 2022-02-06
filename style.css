@@ -666,9 +666,8 @@ header {
 }
 @media screen and (min-width: 992px) {
   .btn-fnc__choice__txt {
-    position: fixed;
     left: unset;
-    top: 56%;
+    top: 72%;
   }
 }
 .btn-fnc__choice__num {

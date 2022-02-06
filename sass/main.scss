@@ -128,9 +128,9 @@ header{
             top: 35%;
             position: absolute;
             @include desktop{
-                position: fixed;
+
                 left: unset;
-                top: 56%;
+                top: 72%;
             }
         }
         &__num{
