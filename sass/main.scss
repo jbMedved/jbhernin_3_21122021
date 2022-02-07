@@ -340,6 +340,11 @@ header{
 footer{
     background-color: darken($color: $grix, $amount: 75%);
     padding-bottom: 5%;
+    @include tablette{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
 }
 
 .footer{
@@ -354,8 +359,12 @@ footer{
             padding-top: 3%;
             stroke: white;
             width: 20%;
-            @include decalage;            
-            & path{fill: white;
+            @include decalage; 
+            @include tablette{
+            width: 100%;
+            }           
+            & path{
+                fill: white;
             }
         }
     }
@@ -364,12 +373,18 @@ footer{
             margin: 0px;
             padding-left: 0px;
             @include decalage;
+            @include tablette{
+                width: 150%;
+            }          
             @include desktop{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
             }
             & li{
                 padding-bottom: 1%;
+                @include tablette{
+                    padding-bottom: 3%;
+                }     
                 @include desktop{
                     text-align: center;
                 }
