@@ -434,11 +434,24 @@ a:visited, a:link {
   animation: loadspin2 2s linear forwards;
 }
 
-.tout {
+.tout-index {
   position: relative;
   z-index: 0;
   transform: scale(0);
   animation: duringload 2.5s linear forwards;
+}
+@media screen and (min-width: 992px) {
+  .tout-index {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tout {
+    max-width: 1280px;
+    margin: auto;
+  }
 }
 
 @keyframes loadspin {
@@ -581,19 +594,36 @@ header {
   display: flex;
   justify-content: center;
   text-align: center;
+  max-width: 300px;
+  margin: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .presentation__1, .presentation__2, .presentation__explore {
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 992px) {
+  .presentation__1, .presentation__2, .presentation__explore {
+    max-width: unset;
+  }
 }
 .presentation h2 {
   margin-top: 0px;
+  margin-bottom: 5%;
+}
+.presentation p {
+  margin-bottom: 5%;
 }
 .presentation__explore {
   width: 60%;
+  max-width: 300px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   border: 0px solid #9356DC;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 3px 3px 3px #d9d9d9;
   color: white;
-  border-radius: 20px;
+  border-radius: 40px;
   margin-bottom: 30px;
 }
 .presentation__explore:hover {
@@ -609,6 +639,13 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 20% 80%;
+    margin-left: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .fonctionnement .fnc-titre {
+    grid-column: 1/span 3;
+    text-align: center;
   }
 }
 @media screen and (min-width: 992px) {
@@ -641,10 +678,12 @@ header {
   box-shadow: 3px 3px 3px #d9d9d9;
   position: relative;
   height: 30px;
+  color: #8c8c8c;
 }
 @media screen and (min-width: 992px) {
   .btn-fnc__choice {
     height: 100px;
+    margin: 15px;
   }
 }
 .btn-fnc__choice i {
@@ -670,6 +709,7 @@ header {
 }
 .btn-fnc__choice__txt {
   color: initial;
+  font-weight: bold;
   left: 25%;
   top: 35%;
   position: absolute;
@@ -704,6 +744,7 @@ header {
 #restos {
   background-color: #F2F2F2;
   padding-bottom: 15%;
+  padding-top: 10%;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   #restos {
@@ -711,6 +752,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 15% 40% 40%;
     padding-bottom: 10%;
+    padding-top: 3%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -719,6 +761,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 25% 75%;
     padding-bottom: 5%;
+    padding-top: 3%;
   }
 }
 #restos figure {
@@ -914,6 +957,16 @@ footer {
 .img-resto img {
   aspect-ratio: 1/1;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .img-resto img {
+    aspect-ratio: unset;
+  }
+}
+@media screen and (min-width: 992px) {
+  .img-resto img {
+    aspect-ratio: unset;
+  }
+}
 
 .menu {
   position: relative;
@@ -927,6 +980,20 @@ footer {
   margin-right: 5%;
   margin-bottom: 5%;
 }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .menu .plats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu .plats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .menu .plats h2 {
   margin-bottom: 0px;
 }
@@ -934,6 +1001,7 @@ footer {
   border: 3px solid transparent;
   border-bottom-color: #99E2D0;
   width: 15%;
+  max-width: 70px;
 }
 .menu__nom {
   font-size: 30px;

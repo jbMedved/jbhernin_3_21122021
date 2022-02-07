@@ -51,19 +51,32 @@ header{
     &__1, &__2, &__explore{
         @include flex-centreh;
         text-align: center;
+        max-width: 300px;
+        margin: auto;
+        @include tablette{
+            max-width: unset;
+        }
+        @include desktop{
+            max-width: unset;
+        }
     }
     & h2{
         margin-top: 0px;
+        margin-bottom: 5%;
+    }
+    & p{
+        margin-bottom: 5%;
     }
     &__explore{
         width: 60%;
+        max-width: 300px;
         margin: auto;
-        padding:10px;
+        padding:20px;
         border: 0px solid $couleur-primaire;
         background: linear-gradient($couleur-secondaire, $couleur-primaire);
         box-shadow: 3px 3px 3px darken($grix, 10%);
         color: white;
-        border-radius: 20px;
+        border-radius: 40px;
         margin-bottom: 30px;
         &:hover{
             background: linear-gradient(lighten($couleur-secondaire,10%), (lighten($couleur-primaire, 10%)));
@@ -78,8 +91,13 @@ header{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 20% 80%;
+        margin-left: unset;
     }
     & .fnc-titre{
+        @include tablette{
+            grid-column: 1 / span 3;
+            text-align: center;   
+        }
         @include desktop{
             grid-column: 1 / span 3;
             text-align: center;
@@ -105,14 +123,17 @@ header{
         box-shadow: 3px 3px 3px darken($grix, 10%);
         position: relative;
         height: 30px;
+        color: darken($color: $grix, $amount: 40%);
         @include desktop{
             height: 100px;
+            margin: 15px;
         }
         & i{
             @include flex-centreh;
             position: absolute;
             left: 15%;
             top: 35%;
+            
             @include desktop{
                 left: 51%;
                 top: 42%;
@@ -130,6 +151,7 @@ header{
         }
         &__txt{
             color: initial;
+            font-weight: bold;
             left: 25%;
             top: 35%;
             position: absolute;
@@ -167,17 +189,20 @@ header{
 #restos {
     background-color: $grix;
     padding-bottom: 15%;
+    padding-top: 10%;
     @include tablette{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 15% 40% 40%;
         padding-bottom: 10%;
+        padding-top: 3%
     }
     @include desktop{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 25% 75%;
         padding-bottom: 5%;
+        padding-top: 3%
     }
     & figure {
         @include decalage;
@@ -357,6 +382,12 @@ footer{
     z-index: -1;
     & img{
         aspect-ratio: 1 / 1;
+        @include tablette{
+            aspect-ratio: unset;  
+        }
+        @include desktop{
+            aspect-ratio: unset; 
+        }
     }
 }
 .menu{
@@ -368,6 +399,14 @@ footer{
     & .plats{
         @include decalage;
         margin-bottom: 5%;
+        @include tablette{
+            @include flex-centrev;
+            flex-direction: column;
+        }
+        @include desktop{
+            @include flex-centrev;
+            flex-direction: column;
+        }
         & h2{
         margin-bottom: 0px;
         }
@@ -375,6 +414,7 @@ footer{
         border: 3px solid transparent;
         border-bottom-color: $couleur-tertiaire;
         width: 15%;
+        max-width: 70px;
         }
     }
     &__nom{
@@ -487,7 +527,7 @@ footer{
             transform: translateY(200px); opacity:0;
             animation: menu $anim-menu-duration $anim-menu-wait02 linear forwards;
             @include desktop{
-                animation: menu $anim-menu-duration $anim-menu-wait linear forwards;
+                animation: menu $anim-menu-duration $anim-menu-wait linear forwards ;
             }
         }
         &__entree3 {
