@@ -1138,6 +1138,7 @@ footer {
 .menu__entrees__desc {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu__entrees__desc__txt {
   width: 80%;
@@ -1192,7 +1193,7 @@ footer {
   color: white;
   border-radius: 0px 10px 10px 0px;
   transform-origin: right;
-  transform: scaleX(0);
+  transform: translateX(114px);
   transition: transform 1s;
 }
 .menu__entrees__desc__valid__check {
@@ -1211,10 +1212,10 @@ footer {
   transform: translateX(0%);
 }
 .menu__entrees__desc:hover .menu__entrees__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__entrees__desc:active .menu__entrees__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__entrees__desc:hover .menu__entrees__desc__txt {
   width: 45%;
@@ -1244,6 +1245,7 @@ footer {
 .menu__plats__desc {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu__plats__desc__txt {
   width: 80%;
@@ -1298,7 +1300,7 @@ footer {
   color: white;
   border-radius: 0px 10px 10px 0px;
   transform-origin: right;
-  transform: scaleX(0);
+  transform: translateX(114px);
   transition: transform 1s;
 }
 .menu__plats__desc__valid__check {
@@ -1317,10 +1319,10 @@ footer {
   transform: translateX(0%);
 }
 .menu__plats__desc:hover .menu__plats__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__plats__desc:active .menu__plats__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__plats__desc:hover .menu__plats__desc__txt {
   width: 45%;
@@ -1350,6 +1352,7 @@ footer {
 .menu__desserts__desc {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .menu__desserts__desc__txt {
   width: 80%;
@@ -1404,7 +1407,7 @@ footer {
   color: white;
   border-radius: 0px 10px 10px 0px;
   transform-origin: right;
-  transform: scaleX(0);
+  transform: translateX(114px);
   transition: transform 1s;
 }
 .menu__desserts__desc__valid__check {
@@ -1423,10 +1426,10 @@ footer {
   transform: translateX(0%);
 }
 .menu__desserts__desc:hover .menu__desserts__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__desserts__desc:active .menu__desserts__desc__valid {
-  transform: scaleX(1);
+  transform: translateX(0px);
 }
 .menu__desserts__desc:hover .menu__desserts__desc__txt {
   width: 45%;

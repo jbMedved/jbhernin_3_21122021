@@ -69,6 +69,7 @@ margin-right: 5%;
     &__desc{
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
         
         &__txt{
             width: 80%;
@@ -123,8 +124,8 @@ margin-right: 5%;
             color : white;
             border-radius: 0px 10px 10px 0px;
             transform-origin: right;
-            transform: scaleX(0);
-            transition :transform 1s;
+            transform: translateX(114px);
+            transition: transform 1s;
             &__check{
                 transition: transform 1s 0.25s;
             }
@@ -142,10 +143,10 @@ margin-right: 5%;
             transform: translateX(0%);
         }
         &:hover &__valid{
-            transform: scaleX(1);
+            transform: translateX(0px);
         }
         &:active &__valid{
-            transform: scaleX(1);
+            transform: translateX(0px);
         } 
         &:hover &__txt{
             width: 45%;
