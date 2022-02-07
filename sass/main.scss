@@ -132,6 +132,9 @@ header{
 
 .btn-fnc {
     @include flex-centrev;
+    @include tablette{
+        justify-content: center;
+    }
     @include desktop{
         grid-row-start: 2;
     }
@@ -149,6 +152,7 @@ header{
         position: relative;
         height: 30px;
         color: darken($color: $grix, $amount: 40%);
+        max-width: 450px;
         @include desktop{
             height: 100px;
             margin: 15px;
@@ -198,6 +202,11 @@ header{
             position: fixed;
             left: 3%;
             margin-top: 1%;
+            @include tablette{
+                left: unset;
+                right: 89%;
+                position: absolute;
+            }
             @include desktop{
                 position: absolute;
                 top: 15%;
@@ -427,12 +436,12 @@ footer{
     position: static;
     z-index: -1;
     & img{
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1.5 / 1;
         @include tablette{
-            aspect-ratio: unset;  
+            aspect-ratio: 1.5/1;  
         }
         @include desktop{
-            aspect-ratio: unset; 
+            aspect-ratio: 1.5/1;
         }
     }
 }
