@@ -476,10 +476,20 @@ footer{
         font-size: 30px;
         display: flex;
         justify-content: space-between;
+        @include desktop{
+            margin-bottom: 5%;
+            margin-top: -5%;
+        }
         &__txt{
             font-family: "Shrikhand", cursive;
             flex: 5;
             padding-left: 5%;
+            @include desktop{
+                margin-bottom: 5%;
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+            }
         }
         &__coeur{
             

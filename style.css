@@ -1093,10 +1093,24 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (min-width: 992px) {
+  .menu__nom {
+    margin-bottom: 5%;
+    margin-top: -5%;
+  }
+}
 .menu__nom__txt {
   font-family: "Shrikhand", cursive;
   flex: 5;
   padding-left: 5%;
+}
+@media screen and (min-width: 992px) {
+  .menu__nom__txt {
+    margin-bottom: 5%;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .menu__nom__coeur {
   flex: 1;
