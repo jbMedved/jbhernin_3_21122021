@@ -672,8 +672,7 @@ header {
 }
 
 .fonctionnement {
-  margin-left: 5%;
-  margin-top: 10%;
+  margin: 10% 0% 10% 5%;
 }
 @media screen and (min-width: 992px) {
   .fonctionnement {
@@ -929,7 +928,8 @@ header {
   height: 100%;
 }
 .restos__carte__texte {
-  margin-left: 5%;
+  margin-left: 2%;
+  margin-top: 2%;
   padding-bottom: 5%;
 }
 .restos__carte__texte h3 {
