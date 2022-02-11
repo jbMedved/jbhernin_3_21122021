@@ -598,6 +598,11 @@ header {
     width: 20%;
   }
 }
+@media screen and (max-width: 340px) {
+  .situation form {
+    width: unset;
+  }
+}
 .situation form input {
   background-color: #e5e5e5;
   font-weight: 900;
@@ -611,6 +616,11 @@ header {
 @media screen and (min-width: 992px) {
   .situation form input {
     padding-left: 30%;
+  }
+}
+@media screen and (max-width: 340px) {
+  .situation form input {
+    width: 140px;
   }
 }
 

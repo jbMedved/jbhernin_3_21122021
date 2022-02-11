@@ -47,6 +47,9 @@ header{
         @include desktop{
             width: 20%;
         }
+        @include mini-mobile{
+            width: unset;
+        }
         
         & input{
             background-color: darken($grix,5%);
@@ -57,6 +60,9 @@ header{
             }
             @include desktop{
                 padding-left: 30%;
+            }
+            @include mini-mobile{
+                width: 140px;
             }
         }
     }
